@@ -1,0 +1,100 @@
+.container {
+    width:100vw;
+    height: 100vh;
+    z-index: 1;
+    position: absolute;
+}
+.train_big_box{
+    width: 100%;
+    height: 29px;
+    bottom: 327px;
+    left:-1.5%;
+    display: flex;
+    position: absolute;
+    animation:train_big_box 6s ease infinite alternate;
+}
+@keyframes train_big_box{
+    0%{
+        left:-1.5%;
+    }
+    50%{
+        left:-4%;
+    }
+    100%{
+        left:-2.5%;
+    }
+}
+.train_box{
+    width: 100px;
+    height: 100%;
+    background: #224779;
+    margin-left:10px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: inset 0px 1px 0 1px #f3d79b;
+    transform: perspective(5px) rotateX(1deg);
+}
+.train_head{
+    width:120px;
+}
+.train_head{
+    width: 100%;
+    height: 100%;
+    background: #224779;
+    content: "";
+    top: 0px;
+    left: 19px;
+    transform: skew(25deg);
+    box-shadow: inset -8px 8px 0 -7px #f3d79b;
+    position: absolute;
+    border-radius: 10px;
+}
+.train_window_box{
+    height:100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 10px;
+    transform: perspective(-5px) rotateX(-1deg);
+}
+.train_window{
+    width: 7px;
+    height: 7px;
+    background:#edcd78;
+    box-shadow: 0 0 7px #edcd78;
+}
+.train_head_window_box{
+    transform: skewX(-20deg);
+    justify-content: flex-end;
+}
+.train_head_window_box > .train_window{
+    margin-left: 7px;
+}
+.bridge_big_box,.frontFloor_big_box{
+    width:100%;
+    display: flex;
+    box-sizing: border-box;
+    position: absolute;
+    overflow: hidden;
+}
+.bridge_big_box{
+    bottom: 31px;
+    border-top:3px solid #c6c6c6;
+}
+.bridge_box{
+    display: flex;
+}
+/* 开始后场景 */
+.frontFloor_big_box{
+    bottom: -90px;
+}
+.frontFloor_box{
+    display: flex;
+}
+.bridge_path{
+    d:path('M0 13470 l0 -1110 53 0 c130 0 331 -35 492 -87 591 -189 1052 -687 1196 -1292 51 -213 49 96 49 -5638 l0 -5343 710 0 710 0 0 5343 c0 5734 -2 5425 49 5638 144 605 605 1103 1196 1292 436 139 901 110 1310 -82 494 -233 861 -683 986 -1210 51 -213 49 96 49 -5638 l0 -5343 705 0 705 0 0 5343 c0 5734 -2 5425 49 5638 144 605 605 1103 1196 1292 161 52 362 87 492 87 l53 0 0 1110 0 1110 -5000 0 -5000 0 0 -1110z');
+}
+.frontFloor > g > path{
+    d:path('M0 871 l0 -871 3445 0 3445 0 0 864 c0 788 38 904 -16 870 -24 9 -423 7 -689 -4 -545 -23 -1147 -80 -1325 -125 -214 -54 -793 -56 -1096 -5 -62 11 -146 33 -188 50 -146 58 -218 65 -641 65 -387 0 -525 -8 -765 -45 -224 -34 -370 -44 -640 -45 -184 0 -278 4 -306 12 -73 23 -573 66 -1004 88 -63 3 -139 8 -167 11 l-53 5 0 -870z')
+}
